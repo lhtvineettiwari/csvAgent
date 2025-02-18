@@ -53,6 +53,25 @@ The CSV Agent works on the ReACT framework method in which agent think, plan and
 
     Make sure you have an OPENAI API key set as an environment variable.
 
+## Setup Instructions using UV
+
+1.  **Install UV:**
+
+    Install `uv` from [here](https://github.com/astral-sh/uv).
+
+2.  **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/lhtvineettiwari/csvAgent.git
+    cd csvAgent
+    ```
+
+3.  **Sync Dependencies:**
+
+    ```bash
+    uv sync
+    ```
+
 ## Usage Instructions
 
 1.  **Run the Streamlit App:**
@@ -90,7 +109,7 @@ This is another example of how a query is processed, showing different query typ
 *   "What are the names of all customers in California?"
 *   "What is the average age of the users?"
 
-## Flow Diagram (Mermaid.js)
+## Flow Diagram 
 ![Workflow](public/workflow.png)
 
 ## Code Process Explanation
