@@ -2,6 +2,24 @@
 
 This project provides a Streamlit-based agent that allows users to upload a CSV file and ask questions about the data using natural language. The agent converts these questions into MongoDB queries, executes them, and displays the results.
 
+The CSV Agent works on the ReACT framework method in which agent think, plan and execute. This is how the Agent thinking process looks like.
+```
+🤔 Understanding the question: how many total users are from Nepal
+
+🔄 Sending to LLM with available fields: Index, Customer Id, First Name, Last Name, Company, City, Country, Phone 1, Phone 2, Email, Subscription Date, Website
+
+🧠 LLM's Thinking Process:
+
+1. The user is looking for the total number of users from Nepal.
+2. The field that contains the country information is "Country".
+3. We can count the number of users from Nepal by matching the "Country" field with the value "Nepal".
+4. We will use the count operation to get the total count of users from Nepal.
+
+📝 Generated Query: {"filter": {"Country": {regex":"Nepal","options": "i"}}, "operation": "count"}
+
+✅ Query validation: Valid JSON
+```
+
 ## Features
 
 *   **CSV Upload:** Upload CSV files directly through the Streamlit interface.
