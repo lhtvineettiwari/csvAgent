@@ -1,0 +1,15 @@
+[project]
+name = "csv-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain-community>=0.3.17",
+    "langchain>=0.3.18",
+    "langgraph>=0.2.70",
+    "pandas>=2.2.3",
+    "pymongo>=4.11.1",
+    "langchain-openai>=0.3.4",
+    "streamlit>=1.42.0",
+]
